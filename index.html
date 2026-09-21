@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#f6f1e8" />
+    <title>Amine &amp; Sahar — Invitation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Cinzel:wght@400;500&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=El+Messiri:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@500;600;700&family=Tajawal:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/invitation.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="stage" id="stage">
+        <audio id="bgMusic" src="assets/music.mp3" loop preload="auto"></audio>
+        <div class="live-petals" id="livePetals" aria-hidden="true"></div>
+        <div class="chrome">
+          <button type="button" id="langToggle">FR</button>
+          <button type="button" id="musicBtn" class="icon-btn" aria-label="Musique">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 10v4h4l5 4V6L8 10H4z" />
+              <path d="M16.5 8.5a5 5 0 0 1 0 7" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="cover" id="cover">
+          <img class="cover-still" id="coverStill" src="assets/cover.jpg" alt="" />
+          <video class="cover-video is-off" id="vidOpen" playsinline preload="auto" muted>
+            <source src="assets/part2.mp4" type="video/mp4" />
+          </video>
+          <div class="save-card" id="saveCard">
+            <p class="kicker">SAVE THE DATE</p>
+            <svg class="rule" viewBox="0 0 80 16" aria-hidden="true">
+              <path fill="none" stroke="#d4c0a4" d="M4 8h28M48 8h28" />
+              <circle cx="40" cy="8" r="3" fill="#d4c0a4" />
+            </svg>
+            <p class="sub" data-i18n="saveSub">Nous nous marions</p>
+            <p class="save-names">
+              <span id="saveMan">Amine</span>
+              <span id="saveAnd">&amp;</span>
+              <span id="saveWoman">Sahar</span>
+            </p>
+            <p class="save-date">03 . 11 . 2026</p>
+          </div>
+          <div class="lang-gate" id="langGate">
+            <div class="lang-picker" id="langPicker">
+              <span class="lang-thumb" id="langThumb"></span>
+              <button type="button" id="pickFr" class="is-on">Français</button>
+              <button type="button" id="pickAr">العربية</button>
+            </div>
+            <p class="tap-hint" id="tapHint" data-i18n="tap">Touchez pour ouvrir</p>
+          </div>
+        </div>
+
+        <main class="inv" id="inv">
+          <section class="screen" id="intro">
+            <div class="screen-inner" id="introInner">
+              <div class="mono" data-i18n="mono">A · S</div>
+              <div class="copy">
+                <p data-i18n="praise1"></p>
+                <p data-i18n="praise2"></p>
+              </div>
+              <div class="names">
+                <span class="who" id="nameMan">أمين</span>
+                <span class="waw" id="andMark">و</span>
+                <span class="who" id="nameWoman">سحر</span>
+              </div>
+              <svg class="flourish" viewBox="0 0 200 28" aria-hidden="true">
+                <path fill="none" stroke="currentColor" d="M8 16c40-12 60 12 92 0 32-12 52 12 92 0" />
+                <circle cx="100" cy="14" r="4" fill="currentColor" />
+              </svg>
+              <div class="copy">
+                <p data-i18n="inchallah"></p>
+                <p class="strong" data-i18n="when"></p>
+                <p data-i18n="whereLine"></p>
+              </div>
+              <p class="copy italic" data-i18n="joy"></p>
+            </div>
+            <button type="button" class="chevron" aria-label="Continuer">▾</button>
+          </section>
+
+          <section class="screen">
+            <div class="screen-inner">
+              <h2 class="title" data-i18n="countdown"></h2>
+              <div class="countdown">
+                <div class="dial">
+                  <svg class="frame" viewBox="0 0 80 110">
+                    <ellipse cx="40" cy="48" rx="28" ry="38" fill="none" stroke="#d8c4a6" />
+                    <ellipse cx="40" cy="48" rx="24" ry="34" fill="rgba(255,255,255,.35)" stroke="#ead9c4" />
+                  </svg>
+                  <span class="num" id="dMins">00</span>
+                  <span class="unit" data-i18n="minutes"></span>
+                </div>
+                <div class="dial">
+                  <svg class="frame" viewBox="0 0 80 110">
+                    <ellipse cx="40" cy="48" rx="28" ry="38" fill="none" stroke="#d8c4a6" />
+                    <ellipse cx="40" cy="48" rx="24" ry="34" fill="rgba(255,255,255,.35)" stroke="#ead9c4" />
+                  </svg>
+                  <span class="num" id="dHours">00</span>
+                  <span class="unit" data-i18n="hours"></span>
+                </div>
+                <div class="dial">
+                  <svg class="frame" viewBox="0 0 80 110">
+                    <ellipse cx="40" cy="48" rx="28" ry="38" fill="none" stroke="#d8c4a6" />
+                    <ellipse cx="40" cy="48" rx="24" ry="34" fill="rgba(255,255,255,.35)" stroke="#ead9c4" />
+                  </svg>
+                  <span class="num" id="dDays">00</span>
+                  <span class="unit" data-i18n="days"></span>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="chevron" aria-label="Continuer">▾</button>
+          </section>
+
+          <section class="screen">
+            <div class="screen-inner">
+              <h2 class="title" data-i18n="place"></h2>
+              <svg class="flourish" viewBox="0 0 200 28" aria-hidden="true">
+                <path fill="none" stroke="currentColor" d="M8 16c40-12 60 12 92 0 32-12 52 12 92 0" />
+                <circle cx="100" cy="14" r="4" fill="currentColor" />
+              </svg>
+              <div class="copy">
+                <p data-i18n="place1"></p>
+                <p data-i18n="place2"></p>
+                <p data-i18n="place3"></p>
+              </div>
+              <div class="place">
+                <p class="city">📍 <span data-i18n="city"></span></p>
+                <p class="country" data-i18n="country"></p>
+              </div>
+              <a class="ornament-btn" id="mapsLink" target="_blank" rel="noopener" data-i18n="directions"></a>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+    <script src="js/config.js"></script>
+    <script src="js/invitation.js"></script>
+  </body>
+</html>
