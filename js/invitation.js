@@ -43,7 +43,7 @@ const I18N = {
     place1: "Nous serons heureux de vous accueillir",
     place2: "pour célébrer notre mariage",
     place3: "dans un lieu d’exception.",
-    city: "Tunis City Hall",
+    city: "Tunis City Hall El Kasba",
     country: "Tunis",
     directions: "Itinéraire",
   },
